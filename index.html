@@ -316,28 +316,25 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
   <div class="wrap">
     <div class="filltext"><h2>Tell me what&rsquo;s wrong.</h2></div>
     <p class="lead">Describe the problem in your own words. I&rsquo;ll get back to you with a plain answer and a fixed price. No jargon, no runaround.</p>
-    <form class="form" action="https://formsubmit.co/bayard@devriesdynamics.com" method="POST">
-      <!-- FormSubmit config -->
-      <input type="hidden" name="_subject" value="New Devries Dynamics enquiry">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://devriesdynamics.com/thanks.html">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <form class="form" id="contact-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSf4pnZHwGNJSXtOwkVFWReUiBYWLuQsIrMMppC_CfK2SQghCg/formResponse"
+          method="POST" target="gform-sink" novalidate>
       <div>
         <label for="name">Your name</label>
-        <input id="name" name="name" type="text" autocomplete="name" required>
+        <input id="name" name="entry.1183169953" type="text" autocomplete="name" required>
       </div>
       <div>
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" autocomplete="email" required>
+        <input id="email" name="entry.748665204" type="email" autocomplete="email" required>
       </div>
       <div>
         <label for="msg">What do you need help with?</label>
-        <textarea id="msg" name="message" placeholder="e.g. My inbox has thousands of unread emails and I don't know where to start&hellip;" required></textarea>
+        <textarea id="msg" name="entry.968277422" placeholder="e.g. My inbox has thousands of unread emails and I don't know where to start&hellip;" required></textarea>
       </div>
       <button type="submit">Send it to me</button>
       <p class="note">Goes straight to my inbox. Prefer email? <a href="mailto:bayard@devriesdynamics.com" style="color:inherit;">bayard@devriesdynamics.com</a></p>
     </form>
+    <iframe name="gform-sink" id="gform-sink" title="Form submission" style="display:none" tabindex="-1" aria-hidden="true"></iframe>
     <p class="direct">Or just email me: <a href="mailto:bayard@devriesdynamics.com">bayard@devriesdynamics.com</a></p>
   </div>
 </section>
@@ -384,6 +381,16 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
     });
   },{threshold:0.5});
   document.querySelectorAll('.filltext').forEach(function(el){ io3.observe(el); });
+})();
+
+// Contact form: post to Google Form in a hidden iframe, then go to thank-you page.
+(function(){
+  var form = document.getElementById('contact-form');
+  if(!form) return;
+  form.addEventListener('submit', function(ev){
+    // let the browser submit normally into the hidden iframe target
+    setTimeout(function(){ window.location.href = '/thanks.html'; }, 700);
+  });
 })();
 </script>
 </body>
