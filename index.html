@@ -316,7 +316,13 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
   <div class="wrap">
     <div class="filltext"><h2>Tell me what&rsquo;s wrong.</h2></div>
     <p class="lead">Describe the problem in your own words. I&rsquo;ll get back to you with a plain answer and a fixed price. No jargon, no runaround.</p>
-    <form class="form" action="https://formspree.io/f/placeholder" method="POST">
+    <form class="form" action="https://formsubmit.co/bayard@devriesdynamics.com" method="POST">
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_subject" value="New Devries Dynamics enquiry">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://devriesdynamics.com/thanks.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div>
         <label for="name">Your name</label>
         <input id="name" name="name" type="text" autocomplete="name" required>
@@ -330,7 +336,7 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
         <textarea id="msg" name="message" placeholder="e.g. My inbox has thousands of unread emails and I don't know where to start&hellip;" required></textarea>
       </div>
       <button type="submit">Send it to me</button>
-      <p class="note">Form backend not connected yet &mdash; for now, email me directly at the address below.</p>
+      <p class="note">Goes straight to my inbox. Prefer email? <a href="mailto:bayard@devriesdynamics.com" style="color:inherit;">bayard@devriesdynamics.com</a></p>
     </form>
     <p class="direct">Or just email me: <a href="mailto:bayard@devriesdynamics.com">bayard@devriesdynamics.com</a></p>
   </div>
