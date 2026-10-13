@@ -166,11 +166,11 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
 @media (max-width:560px){
   body{font-size:16px;}
   .hero{padding:48px 0 44px;}
-  header.site .wrap{flex-direction:column;align-items:stretch;gap:11px;padding-top:12px;padding-bottom:12px;}
-  .brand{align-self:flex-start;}
-  .brand-logo{height:46px;}
-  nav.site{width:100%;}
-  nav.site a{flex:1;text-align:center;padding:11px 6px;font-size:11.5px;letter-spacing:.5px;}
+  header.site .wrap{flex-wrap:nowrap;gap:12px;padding-top:12px;padding-bottom:12px;}
+  .brand{flex:1 1 auto;min-width:0;height:60px;}
+  .brand-logo{width:100%;height:100%;object-fit:contain;object-position:left center;}
+  nav.site{flex:0 0 auto;}
+  nav.site a{padding:10px 9px;font-size:11px;letter-spacing:.5px;}
 }
 </style>
 </head>
