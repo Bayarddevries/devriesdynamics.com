@@ -72,9 +72,9 @@ h1,h2,h3{font-family:'Lilita One',sans-serif;font-weight:400;line-height:1.06;te
 @keyframes snapin{ to{opacity:1;transform:scale(1);} }
 /* ink-draw rule */
 .inkrule{position:relative;height:5px;background:transparent;margin:22px 0;}
-.inkrule::before{content:"";position:absolute;left:0;top:0;height:100%;width:0;background:var(--rust);}
+.inkrule::before{content:"";position:absolute;left:0;top:0;height:100%;width:100%;background:var(--rust);}
 .inkrule.draw::before{animation:inbraw .8s cubic-bezier(.7,0,.2,1) forwards;}
-@keyframes inbraw{to{width:100%;}}
+@keyframes inbraw{from{width:0;}to{width:100%;}}
 .inkrule.ink::before{background:var(--ink);}
 
 @media (prefers-reduced-motion:reduce){
@@ -183,17 +183,21 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
 
 
 /* hero layout */
-.hero-grid{display:grid;grid-template-columns:1.16fr .84fr;grid-template-areas:"head art" "body art";gap:8px 46px;align-items:start;}
+.hero-grid{display:grid;grid-template-columns:1.16fr .84fr;grid-template-areas:"head art" "rule art" "body art";gap:0 46px;align-items:start;}
 .hero-head{grid-area:head;}
-.hero-body{grid-area:body;}
 .hero-art{grid-area:art;}
+.hero-rule{grid-area:rule;}
+.hero-body{grid-area:body;}
 .hero-head h1{font-size:clamp(34px,4.4vw,58px);max-width:13ch;}
 .hero-art img{width:100%;max-height:520px;object-fit:contain;display:block;}
 .hero-grid .hero-panel .stat{min-width:130px;}
+/* mobile: small image beside the H1, ink rule runs under both */
 @media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr;grid-template-areas:"head" "art" "body";gap:24px;}
-  .hero-art{max-width:380px;}
-  .hero-head h1{font-size:clamp(40px,8.5vw,64px);max-width:16ch;}
+  .hero-grid{grid-template-columns:1fr 96px;grid-template-areas:"head art" "rule rule" "body body";gap:14px 16px;align-items:center;}
+  .hero-head h1{font-size:clamp(30px,8.2vw,46px);max-width:12ch;}
+  .hero-rule,.hero-body{grid-column:1 / -1;}
+  .hero-rule .inkrule{margin:6px 0 20px;}
+  .hero-art img{max-height:190px;}
 }
 /* poster divider */
 .posterdivider{background:var(--paper-bright);border-top:var(--rule);border-bottom:var(--rule);padding:46px 0 40px;}
@@ -248,9 +252,9 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
     <div class="hero-grid">
       <div class="hero-head">
         <h1>Your tech is <span class="rust">annoying you.</span> Let&rsquo;s end that.</h1>
-        <div class="inkrule draw" aria-hidden="true"></div>
       </div>
       <div class="hero-art"><img src="art-annoying.png" alt="A smartphone poking a man&rsquo;s ear and patting his head"></div>
+      <div class="hero-rule"><div class="inkrule draw" aria-hidden="true"></div></div>
       <div class="hero-body">
         <p class="sub">From &ldquo;my inbox is a disaster&rdquo; to &ldquo;help me figure out this AI thing&rdquo; &mdash; meet people wherever they are. A real person, plain language, fixed price.</p>
         <div class="btns">
