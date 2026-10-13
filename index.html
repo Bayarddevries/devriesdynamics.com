@@ -69,9 +69,9 @@ h1,h2,h3{font-family:'Lilita One',sans-serif;font-weight:400;line-height:1.06;te
 
 /* ---------- header ---------- */
 header.site{border-bottom:var(--rule);background:var(--paper-bright);}
-header.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap;}
-.brand{display:flex;align-items:center;text-decoration:none;}
-.brand-logo{height:58px;width:auto;display:block;}
+header.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:13px;padding-bottom:13px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;text-decoration:none;flex:0 0 auto;}
+.brand-logo{height:66px;width:auto;display:block;flex:0 0 auto;}
 nav.site{display:flex;gap:0;align-items:stretch;border:2px solid var(--ink);background:var(--paper-bright);}
 nav.site a{font-family:'Space Mono',monospace;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;color:var(--ink);padding:10px 16px;border-left:2px solid var(--ink);transition:background .15s,color .15s;}
 nav.site a:first-child{border-left:none;}
@@ -91,7 +91,7 @@ nav.site a.cta-nav:hover{background:var(--rust);}
   60%{transform:translate(-1px,0);}
   100%{transform:translate(0,0);}
 }
-.seal{width:66px;height:66px;flex:0 0 66px;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--paper-bright);font-family:'Lilita One';font-size:40px;transform:rotate(-4deg);}
+.seal-logo{height:66px;width:auto;flex:0 0 auto;display:block;}
 .hero h1{font-size:clamp(44px,8.5vw,96px);max-width:16ch;}
 .hero p.sub{font-size:clamp(18px,2.4vw,23px);color:var(--ink-soft);max-width:48ch;margin-top:24px;font-weight:500;}
 .btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
@@ -191,7 +191,7 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
 <section class="hero">
   <div class="wrap hero-inner">
     <div class="lockup">
-      <div class="seal logo-nudge" aria-hidden="true">D</div>
+      <img class="seal-logo logo-nudge" src="logo.png" alt="" aria-hidden="true">
       <span class="kicker">Winnipeg &nbsp;·&nbsp; IT Support &amp; Build</span>
       <span class="owned">M&eacute;tis-owned &amp; operated</span>
     </div>
