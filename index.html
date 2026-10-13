@@ -129,13 +129,6 @@ section.band{padding:56px 0;}
 .lane .price{font-family:'Space Mono';font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);}
 .lane .cta{font-family:'Space Mono';font-size:12.5px;font-weight:700;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--rust);padding-bottom:2px;}
 
-/* ---------- proof strip ---------- */
-.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.pblock{border:var(--rule);background:var(--paper-bright);padding:20px;display:flex;flex-direction:column;gap:10px;min-height:180px;}
-.pblock .t{font-family:'Lilita One';font-size:18px;text-transform:uppercase;line-height:1.08;}
-.pblock .d{font-size:14px;color:var(--ink-soft);}
-.pblock a{margin-top:auto;font-family:'Space Mono';font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;border-bottom:2px solid var(--rust);align-self:flex-start;padding-bottom:2px;}
-
 /* ---------- name story ---------- */
 .story{background:var(--ink);color:var(--paper-bright);}
 .story .wrap{padding:64px 24px;}
@@ -170,12 +163,10 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
 /* ---------- responsive ---------- */
 @media (max-width:820px){
   .lanes{grid-template-columns:1fr;}
-  .proof{grid-template-columns:repeat(2,1fr);}
 }
 @media (max-width:560px){
   body{font-size:16px;}
   .hero{padding:48px 0 44px;}
-  .proof{grid-template-columns:1fr;}
   nav.site a{padding:10px 11px;font-size:11.5px;letter-spacing:.5px;}
 }
 </style>
@@ -191,7 +182,6 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
     <nav class="site" aria-label="Main">
       <a href="#support">Support</a>
       <a href="#build">Build</a>
-      <a href="#work">Work</a>
       <a href="#contact" class="cta-nav">Get in touch</a>
     </nav>
   </div>
@@ -212,7 +202,6 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
     <p class="sub">From &ldquo;my inbox is a disaster&rdquo; to &ldquo;help me figure out this AI thing&rdquo; &mdash; meet people wherever they are. A real person, plain language, fixed price.</p>
     <div class="btns">
       <a class="btn primary" href="#contact">Tell me what&rsquo;s wrong</a>
-      <a class="btn" href="#work">See what I&rsquo;ve built</a>
     </div>
     <div class="hero-panel">
       <div class="stat"><div class="n">1&nbsp;on&nbsp;1</div><div class="l">A real human, not a call queue</div></div>
@@ -265,38 +254,6 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
         </div>
       </article>
 
-    </div>
-  </div>
-</section>
-
-<!-- PROOF -->
-<section class="band snap" id="work">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="kicker">Proof of work</span>
-      <h2>Things I&rsquo;ve actually shipped</h2>
-    </div>
-    <div class="proof">
-      <div class="pblock snap">
-        <div class="t">M&eacute;tis Trail V2</div>
-        <div class="d">Interactive history game for the 1878 Carlton Trail, built on 55+ sourced events.</div>
-        <a href="https://bayarddevries.github.io/metis-trail-v2/" target="_blank" rel="noopener">Play &rarr;</a>
-      </div>
-      <div class="pblock snap">
-        <div class="t">Buffalo Counter</div>
-        <div class="d">Museum-grade, scroll-driven data visualization of the Great Buffalo Collapse.</div>
-        <a href="https://bayarddevries.github.io/buffalo-counter/" target="_blank" rel="noopener">View &rarr;</a>
-      </div>
-      <div class="pblock snap">
-        <div class="t">Circle Chase</div>
-        <div class="d">A shipped two-player mobile game &mdash; physics, graphics, the works.</div>
-        <a href="https://bayarddevries.github.io/Circle-Chase/" target="_blank" rel="noopener">View &rarr;</a>
-      </div>
-      <div class="pblock snap">
-        <div class="t">Homeland Map</div>
-        <div class="d">Mapping and data layer for 200+ historic M&eacute;tis locations and waterways.</div>
-        <a href="https://bayarddevries.github.io/metis-homeland-map/" target="_blank" rel="noopener">View &rarr;</a>
-      </div>
     </div>
   </div>
 </section>
