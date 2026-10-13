@@ -179,6 +179,19 @@ section.band{padding:56px 0;}
 footer.site{border-top:var(--rule);background:var(--paper-bright);}
 footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'Space Mono';font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);}
 
+
+/* hero with art */
+.hero-grid{display:grid;grid-template-columns:1.24fr .76fr;gap:40px;align-items:center;}
+.hero-grid .hero-copy h1{font-size:clamp(34px,4.6vw,64px);max-width:14ch;}
+.hero-art img{width:100%;max-height:520px;object-fit:contain;display:block;}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr;gap:26px;}.hero-art{max-width:340px;}.hero-grid .hero-copy h1{font-size:clamp(38px,8vw,62px);max-width:16ch;}}
+/* poster band */
+.posters{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.poster{border:var(--rule);background:var(--paper-bright);padding:26px;display:flex;flex-direction:column;align-items:center;gap:18px;}
+.poster img{width:100%;height:230px;object-fit:contain;display:block;}
+.poster figcaption{font-family:'Space Mono';font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);text-align:center;}
+@media (max-width:560px){.posters{grid-template-columns:1fr;}}
+
 /* ---------- responsive ---------- */
 @media (max-width:820px){
   .lanes{grid-template-columns:1fr;}
@@ -218,6 +231,8 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-inner">
+    <div class="hero-grid">
+    <div class="hero-copy">
     <div class="lockup">
       <img class="seal-logo" src="logo.png" alt="" aria-hidden="true">
       <span class="kicker">Winnipeg &nbsp;·&nbsp; IT Support &amp; Build</span>
@@ -232,7 +247,10 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
     <div class="hero-panel">
       <div class="stat"><div class="n">1&nbsp;on&nbsp;1</div><div class="l">A real human, not a call queue</div></div>
       <div class="stat"><div class="n">Fixed</div><div class="l">Flat-rate pricing, quoted upfront</div></div>
-      <div class="stat"><div class="n">Winnipeg</div><div class="l">Remote-first, on-site by appointment</div></div>
+      <div class="stat"><div class="n">Winnipeg</div><div class="l">On-site in Winnipeg &middot; remote anywhere</div></div>
+    </div>
+    </div>
+    <div class="hero-art"><img src="art-annoying.png" alt="A smartphone poking a man&rsquo;s ear and patting his head"></div>
     </div>
   </div>
 </section>
@@ -258,7 +276,7 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
           <li><strong>Tech made understandable</strong> &mdash; plain-language coaching, learn to spot a scam email</li>
         </ul>
         <div class="foot">
-          <span class="price">Flat-rate per task &middot; or a capped monthly plan</span>
+          <span class="price">Most jobs $50&ndash;$100 &middot; flat rate, quoted upfront</span>
           <a class="cta" href="#contact">Get help &rarr;</a>
         </div>
       </article>
@@ -275,11 +293,32 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
           <li><strong>Small-business sites</strong> &mdash; a real web presence without the $10K agency runaround</li>
         </ul>
         <div class="foot">
-          <span class="price">Value-priced packages &middot; 50% deposit to start</span>
+          <span class="price">Fixed price quoted upfront &middot; 50% deposit reserves your slot</span>
           <a class="cta" href="#contact">Talk about a project &rarr;</a>
         </div>
       </article>
 
+    </div>
+  </div>
+</section>
+
+
+<!-- POSTER BAND -->
+<section class="band snap posterband">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Seen the poster?</span>
+      <h2>Yeah &mdash; that&rsquo;s me.</h2>
+    </div>
+    <div class="posters">
+      <figure class="poster">
+        <img src="art-chase.png" alt="A man fleeing a frantic smartphone">
+        <figcaption>&ldquo;Don&rsquo;t let your tech outrun you.&rdquo;</figcaption>
+      </figure>
+      <figure class="poster">
+        <img src="art-annoying.png" alt="A smartphone poking a man's ear and patting his head">
+        <figcaption>&ldquo;That phone is not on your side. I&rsquo;ll talk it down.&rdquo;</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -297,7 +336,7 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="filltext"><h2>Tell me what&rsquo;s wrong.</h2></div>
-    <p class="lead">Describe the problem in your own words. I&rsquo;ll get back to you with a plain answer and a fixed price. No jargon, no runaround.</p>
+    <p class="lead">Describe the problem in your own words. I&rsquo;ll get back to you, usually within a day, with a plain answer and a fixed price. No jargon, no runaround.</p>
     <form class="form" id="contact-form"
           action="https://docs.google.com/forms/d/e/1FAIpQLSf4pnZHwGNJSXtOwkVFWReUiBYWLuQsIrMMppC_CfK2SQghCg/formResponse"
           method="POST" target="gform-sink">
