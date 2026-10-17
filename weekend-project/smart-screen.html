@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"I turned a 2017 tablet into a family smart screen" — Weekend Project</title>
+<meta name="description" content=""I turned a 2017 tablet into a family smart screen" — Weekend Project, a DeVries Dynamics build log.">
+<link rel="canonical" href="https://devriesdynamics.com/weekend-project/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DeVries Dynamics">
+<meta property="og:title" content=""I turned a 2017 tablet into a family smart screen"">
+<meta property="og:description" content=""I turned a 2017 tablet into a family smart screen" — Weekend Project, a DeVries Dynamics build log.">
+<meta property="og:url" content="https://devriesdynamics.com/weekend-project/">
+<meta property="og:image" content="https://devriesdynamics.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F3EA;--paper-bright:#FCFAF3;--ink:#141412;--ink-soft:#3A3A36;--rust:#C44C1E;--rust-text:#BE4A1D;--rule:3px solid var(--ink);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background-color:var(--paper);background-image:radial-gradient(rgba(20,20,18,0.055) 1px,transparent 1.4px);background-size:15px 15px;color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+a{color:inherit;}
+h1,h2,h3{font-family:'Lilita One',sans-serif;font-weight:400;line-height:1.08;text-transform:uppercase;letter-spacing:.5px;}
+.kicker{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-soft);}
+.rust{color:var(--rust-text);}
+header.site{border-bottom:var(--rule);padding:22px 0;margin-bottom:40px;}
+header.site .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1080px;}
+.brand{font-family:'Lilita One',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.5px;}
+.brand .dyn{color:var(--rust);font-size:13px;letter-spacing:4px;display:block;}
+nav.site{font-family:'Space Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;}
+nav.site a{text-decoration:none;margin-left:18px;}
+nav.site a:hover{color:var(--rust);}
+article.post .kicker{margin-bottom:14px;}
+article.post h1{font-size:40px;margin-bottom:18px;}
+.meta{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--ink-soft);border-bottom:var(--rule);padding-bottom:22px;margin-bottom:30px;}
+.meta .rust{color:var(--rust-text);}
+article.post p{margin-bottom:20px;}
+article.post h2{font-size:24px;margin:34px 0 14px;}
+article.post h3{font-size:19px;margin:26px 0 10px;}
+article.post ul,article.post ol{margin:0 0 20px 22px;}
+article.post li{margin-bottom:8px;}
+article.post blockquote{border-left:4px solid var(--rust);padding:4px 0 4px 18px;margin:0 0 20px;font-style:italic;color:var(--ink-soft);}
+article.post code{font-family:'Space Mono',monospace;font-size:14px;background:rgba(20,20,18,0.07);padding:2px 6px;border-radius:3px;}
+article.post pre{background:var(--ink);color:var(--paper-bright);padding:18px;border-radius:6px;overflow-x:auto;margin:0 0 20px;font-family:'Space Mono',monospace;font-size:14px;line-height:1.5;}
+article.post pre code{background:none;color:inherit;padding:0;}
+article.post img{max-width:100%;border:2px solid var(--ink);margin:6px 0 20px;}
+footer.site{border-top:var(--rule);margin-top:60px;padding:26px 0 40px;}
+footer.site .wrap{max-width:1080px;display:flex;justify-content:space-between;align-items:center;font-family:'Space Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);}
+footer.site a{text-decoration:none;}
+footer.site a:hover{color:var(--rust);}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <div class="brand">DeVries<span class="dyn">Dynamics</span></div>
+  <nav class="site">
+    <a href="/">Support</a>
+    <a href="/">Build</a>
+    <a href="/weekend-project/">Weekend Project</a>
+    <a href="/#contact">Get in touch</a>
+  </nav>
+</div></header>
+<article class="post"><div class="wrap">
+  <div class="kicker">"Weekend Project · 01"</div>
+  <h1>"I turned a 2017 tablet into a family smart screen"</h1>
+  <div class="meta">2026-10-17 · <span class="rust">old hardware · repurpose</span> · "6 min read"</div>
+  <p>We had an old Huawei tablet sitting in a drawer. Android 7, 1.9 GB of RAM, maybe a gig of free space after the bloat. Not worth anything to sell, too slow to be useful as a tablet. But it was a perfectly good screen, still turns on, and feels like a complete waste to give up on. So for this weekend&#39;s project we are going to bring this thing back to life and find a way to make it useful again.</p>
+<p>One thing I&#39;ve been looking to get for a while is a new smart screen. I&#39;ve got this old tablet and I&#39;m not willing to give Google or Amazon any more of my money, so this sounds like a good fit.</p>
+<h2>The problem with old Android</h2>
+<p>Old Android tablets like this are slow for one reason: the manufacturer loaded them with junk. This one had 30 packages of preinstalled garbage eating RAM and CPU. You can&#39;t root it, but you don&#39;t need to. You can debloat it with <code>adb</code> and a list of package names.</p>
+<pre><code class="language-bash">adb connect 10.0.0.81:5555
+adb shell pm list packages | grep -i huawei
+adb shell pm disable-user --user 0 com.huawei.something
+</code></pre>
+<p>Stripped all the junk, and suddenly a 1.9 GB tablet has room to breathe. It&#39;s not a new tablet, and it&#39;s not going to replace anything you&#39;ve bought in the last 5 years, but it&#39;s now running smoother and can display a webpage in Chrome, which is all we are going to need.</p>
+<h2>One page, not an app</h2>
+<p>The trick is that the tablet doesn&#39;t run a heavy app. It runs a single thin web page in fullscreen Chrome, and a small server on my PC feeds it data. The tablet just renders what the server sends, so it all lives in my home.</p>
+<ul>
+<li><strong>Calendar</strong> — Google Calendar, read-only</li>
+<li><strong>Reminders</strong> — Google Tasks</li>
+<li><strong>Weather</strong> — Open-Meteo, free, no key</li>
+<li><strong>Photos</strong> — a shared album, no API needed</li>
+</ul>
+<p>Everything is free. No subscriptions, no cloud service, no monthly fee. Just a tablet that was going in the trash and a web interface being served from the PC in the office.</p>
+<h2>Why this matters</h2>
+<p>Most people don&#39;t need a new device. They need the ones they have to stop being annoying. Narrow the use of these devices to something simple, like display my family&#39;s calendar and to-do list, and you might be blown away at how capable that old tablet you have in your closet might be. That&#39;s the whole philosophy behind this business, and how I want to help people.</p>
+<p><strong>Next weekend:</strong> We find a way to breathe new life into a Pixel 2 that has been sitting in a drawer for 4 years.</p>
+<p>If you&#39;ve got an old device that&#39;s more trouble than it&#39;s worth, let&#39;s bring it back to life. <a href="https://devriesdynamics.com">devriesdynamics.com</a></p>
+
+</div></article>
+<footer class="site"><div class="wrap">
+  <span>— Winnipeg · Métis-owned &amp; operated</span>
+  <a href="https://devriesdynamics.com">devriesdynamics.com</a>
+</div></footer>
+</body></html>
