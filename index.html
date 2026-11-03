@@ -162,6 +162,7 @@ section.band{padding:56px 0;}
 .contact .direct a{border-bottom:2px solid var(--ink);text-decoration:none;}
 
 /* ---------- footer ---------- */
+.foot-mark{height:34px;width:auto;display:block;flex:0 0 auto;opacity:.85;}
 footer.site{border-top:var(--rule);background:var(--paper-bright);}
 footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'Space Mono';font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);}
 
@@ -200,6 +201,8 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
   .brand-logo{width:100%;height:100%;object-fit:contain;object-position:left center;}
   nav.site{flex:0 0 auto;}
   nav.site a{padding:0 11px;font-size:11px;letter-spacing:.5px;display:flex;align-items:center;min-height:44px;}
+  nav.site a.nav-projects{display:none;}
+  nav.site .call-num{display:none;}
   .hero .lockup{justify-content:flex-start;gap:12px 14px;}
 }
 </style>
@@ -233,8 +236,8 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
       <img class="brand-logo" src="logo-long.png" alt="DeVries Dynamics" width="480" height="252">
     </a>
     <nav class="site" aria-label="Main">
-      <a href="#support">Support</a>
-      <a href="#build">Build</a>
+      <a class="nav-projects" href="/weekend-project/">Weekend Project</a>
+      <a class="nav-call" href="tel:+12045103865"><span class="call-word">Call</span><span class="call-num">&nbsp;(204) 510-3865</span></a>
       <a href="#contact" class="cta-nav">Get in touch</a>
     </nav>
   </div>
@@ -247,7 +250,6 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
   <div class="wrap hero-inner">
     <div class="lockup">
       <span class="lockup-left">
-        <img class="seal-logo" src="logo.png" alt="" aria-hidden="true" width="640" height="687">
         <span class="kicker">Winnipeg &nbsp;·&nbsp; IT Support &amp; Build</span>
       </span>
       <span class="owned">M&eacute;tis-owned &amp; operated</span>
@@ -262,7 +264,6 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
         <p class="sub">From &ldquo;my inbox is a disaster&rdquo; to &ldquo;help me figure out this AI thing&rdquo;: meet people wherever they are. A real person, plain language, fixed price.</p>
         <div class="btns">
           <a class="btn primary" href="#contact">Tell me what&rsquo;s wrong</a>
-          <a class="btn" href="tel:+12045103865">Call (204) 510-3865</a>
         </div>
         <div class="hero-panel">
           <div class="stat"><div class="n">1&nbsp;on&nbsp;1</div><div class="l">A real human, not a call queue</div></div>
@@ -378,6 +379,7 @@ footer.site .wrap{padding:30px 24px;display:flex;justify-content:space-between;g
 
 <footer class="site">
   <div class="wrap">
+    <img class="foot-mark" src="logo.png" alt="" aria-hidden="true" width="640" height="687">
     <span>DeVries Dynamics · Winnipeg, Manitoba</span>
     <span>M&eacute;tis-owned &amp; operated &middot; computer &amp; device support &middot; web &amp; automation builds</span>
     <span><a href="tel:+12045103865">(204) 510-3865</a> &middot; <a href="/weekend-project/">Weekend Project</a> &middot; <a href="/privacy.html">Privacy</a></span>
