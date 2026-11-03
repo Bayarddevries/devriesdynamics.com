@@ -54,10 +54,9 @@ footer.site a:hover{color:var(--rust);}
 <body>
 <header class="site"><div class="wrap">
   <div class="brand">DeVries<span class="dyn">Dynamics</span></div>
-  <nav class="site">
-    <a href="/">Support</a>
-    <a href="/">Build</a>
-    <a href="/weekend-project/">Weekend Project</a>
+  <nav class="site" aria-label="Main">
+    <a href="/">Home</a>
+    <a href="tel:+12045103865">Call (204) 510-3865</a>
     <a href="/#contact">Get in touch</a>
   </nav>
 </div></header>
@@ -65,17 +64,17 @@ footer.site a:hover{color:var(--rust);}
   <div class="kicker">"Weekend Project · 01"</div>
   <h1>"I turned a 2017 tablet into a family smart screen"</h1>
   <div class="meta">2026-10-17 · <span class="rust">old hardware · repurpose</span> · "6 min read"</div>
-  <p>We had an old Huawei tablet sitting in a drawer. Android 7, 1.9 GB of RAM, maybe a gig of free space after the bloat. Not worth anything to sell, too slow to be useful as a tablet. But it was a perfectly good screen, still turns on, and feels like a complete waste to give up on. So for this weekend&#39;s project we are going to bring this thing back to life and find a way to make it useful again.</p>
-<p>One thing I&#39;ve been looking to get for a while is a new smart screen. I&#39;ve got this old tablet and I&#39;m not willing to give Google or Amazon any more of my money, so this sounds like a good fit.</p>
+  <p>We had an old Huawei tablet sitting in a drawer. Android 7, 1.9 GB of RAM, maybe a gig of free space after the bloat. Not worth anything to sell, too slow to be useful as a tablet. But it was a perfectly good screen, still turns on, and feels like a complete waste to give up on. So for this weekend&rsquo;s project we are going to bring this thing back to life and find a way to make it useful again.</p>
+<p>One thing I&rsquo;ve been looking to get for a while is a new smart screen. I&rsquo;ve got this old tablet and I&rsquo;m not willing to give Google or Amazon any more of my money, so this sounds like a good fit.</p>
 <h2>The problem with old Android</h2>
-<p>Old Android tablets like this are slow for one reason: the manufacturer loaded them with junk. This one had 30 packages of preinstalled garbage eating RAM and CPU. You can&#39;t root it, but you don&#39;t need to. You can debloat it with <code>adb</code> and a list of package names.</p>
+<p>Old Android tablets like this are slow for one reason: the manufacturer loaded them with junk. This one had 30 packages of preinstalled garbage eating RAM and CPU. You can&rsquo;t root it, but you don&rsquo;t need to. You can debloat it with <code>adb</code> and a list of package names.</p>
 <pre><code class="language-bash">adb connect 10.0.0.81:5555
 adb shell pm list packages | grep -i huawei
 adb shell pm disable-user --user 0 com.huawei.something
 </code></pre>
-<p>Stripped all the junk, and suddenly a 1.9 GB tablet has room to breathe. It&#39;s not a new tablet, and it&#39;s not going to replace anything you&#39;ve bought in the last 5 years, but it&#39;s now running smoother and can display a webpage in Chrome, which is all we are going to need.</p>
+<p>Stripped all the junk, and suddenly a 1.9 GB tablet has room to breathe. It&rsquo;s not a new tablet, and it&rsquo;s not going to replace anything you&rsquo;ve bought in the last 5 years, but it&rsquo;s now running smoother and can display a webpage in Chrome, which is all we are going to need.</p>
 <h2>One page, not an app</h2>
-<p>The trick is that the tablet doesn&#39;t run a heavy app. It runs a single thin web page in fullscreen Chrome, and a small server on my PC feeds it data. The tablet just renders what the server sends, so it all lives in my home.</p>
+<p>The trick is that the tablet doesn&rsquo;t run a heavy app. It runs a single thin web page in fullscreen Chrome, and a small server on my PC feeds it data. The tablet just renders what the server sends, so it all lives in my home.</p>
 <ul>
 <li><strong>Calendar</strong>: Google Calendar, read-only</li>
 <li><strong>Reminders</strong>: Google Tasks</li>
@@ -84,9 +83,9 @@ adb shell pm disable-user --user 0 com.huawei.something
 </ul>
 <p>Everything is free. No subscriptions, no cloud service, no monthly fee. Just a tablet that was going in the trash and a web interface being served from the PC in the office.</p>
 <h2>Why this matters</h2>
-<p>Most people don&#39;t need a new device. They need the ones they have to stop being annoying. Narrow the use of these devices to something simple, like display my family&#39;s calendar and to-do list, and you might be blown away at how capable that old tablet you have in your closet might be. That&#39;s the whole philosophy behind this business, and how I want to help people.</p>
-<p><strong>Next weekend:</strong> We find a way to breathe new life into a Pixel 2 that has been sitting in a drawer for 4 years.</p>
-<p>If you&#39;ve got an old device that&#39;s more trouble than it&#39;s worth, let&#39;s bring it back to life. <a href="https://devriesdynamics.com">devriesdynamics.com</a></p>
+<p>Most people don&rsquo;t need a new device. They need the ones they have to stop being annoying. Narrow the use of these devices to something simple, like display my family&rsquo;s calendar and to-do list, and you might be blown away at how capable that old tablet you have in your closet might be. That&rsquo;s the whole philosophy behind this business, and how I want to help people.</p>
+<p><strong>Next weekend:</strong> we find a way to breathe new life into a Pixel 2 that has been sitting in a drawer for 4 years.</p>
+<p>If you&rsquo;ve got an old device that&rsquo;s more trouble than it&rsquo;s worth, let&rsquo;s bring it back to life. <a href="https://devriesdynamics.com">devriesdynamics.com</a></p>
 
 </div></article>
 <footer class="site"><div class="wrap">
